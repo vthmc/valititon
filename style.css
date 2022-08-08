@@ -10,21 +10,21 @@
 }
 body{
     height: 100vh;
-    background-color: #accada;
+    background-color: #0d0d0f;
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.validation{
+.container{
     width: 400px;
     border: none;
     border-radius: 10px;
     background-color: white;
     padding: 40px;
 }
-.validation h1{
+.container h1{
     text-align: center;
 }
 .form-control{
@@ -44,7 +44,7 @@ body{
     position: absolute;
     border-bottom: 3px solid var(--success-color);
     left: 0;
-    top: 3px;
+    top: 38px;
     width: 0%;
     transition: 3s;
 }
