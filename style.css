@@ -17,14 +17,14 @@ body{
     justify-content: center;
     align-items: center;
 }
-.container{
+.validation{
     width: 400px;
     border: none;
     border-radius: 10px;
     background-color: white;
     padding: 40px;
 }
-.container h1{
+.validation h1{
     text-align: center;
 }
 .form-control{
@@ -44,7 +44,7 @@ body{
     position: absolute;
     border-bottom: 3px solid var(--success-color);
     left: 0;
-    top: 38px;
+    top: 3px;
     width: 0%;
     transition: 3s;
 }
