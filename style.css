@@ -10,7 +10,7 @@
 }
 body{
     height: 100vh;
-    background-color: #0d0d0f;
+    background-color: #ffffff;
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -23,6 +23,7 @@ body{
     border-radius: 10px;
     background-color: white;
     padding: 40px;
+    border: 2px solid rgb(100, 100, 100);
 }
 .container h1{
     text-align: center;
@@ -44,7 +45,7 @@ body{
     position: absolute;
     border-bottom: 3px solid var(--success-color);
     left: 0;
-    top: 38px;
+    top: 37px;
     width: 0%;
     transition: 3s;
 }

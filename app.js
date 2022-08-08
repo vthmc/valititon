@@ -27,7 +27,7 @@ function checkEmptyError(listInput){
 
         if(!input.value){
             isEmptyError = true ;
-           showError (input,'khong duoc de trong ')
+           showError (input,'Không Được Để Trống ')
     }else{
         showSuccess(input)
     }
@@ -57,18 +57,18 @@ function checkLengthError(input, min,max){
     input.value = input.value.trim()
 
     if(input.value.length < min){
-    showError(input,`phai co it nhat ${min} ky tu`)
+    showError(input,`Phải Có Ít Nhất ${min} Ký Tự`)
     return true
 }
     if(input.value.length > max){
-    showError(input,`khong duoc qua ${max} ky tu`)
+    showError(input,`Phải Có Ít Nhất ${max} Ký Tự`)
     return true
     }
     return false
 } 
 function checkMatchPasswordError(passwordInput, cfpasswordInput){
     if(passwordInput.value !== cfpasswordInput.value){
-        showError(cfpasswordInput, 'mat khau khong trung khop')
+        showError(cfpasswordInput, 'Mật khẩu Không Trùng Khớp')
         return  true
     }
 
@@ -79,11 +79,17 @@ function checkMatchPasswordError(passwordInput, cfpasswordInput){
 form.addEventListener('submit', function(e){
     e.preventDefault()
 
-    let isEmptyError = checkEmptyError([usename, email, password, confirmPassword]);
-    let isEmailError = checkEmailError(email)
-    let isUsernameLengthError = checkLengthError(usename, 3, 10 )
-    let isPasswordLengthError = checkLengthError(password, 3, 10)
-    let isMatchError = checkMatchPasswordError(password, confirmPassword)
+    let isEmptyError = checkEmptyError([
+        usename,
+        email,
+        password,
+        confirmPassword,
+        ]);
+if (!isEmptyError){
+    let isEmailError = checkEmailError(email);
+    let isUsernameLengthError = checkLengthError(usename, 3, 10 );
+    let isPasswordLengthError = checkLengthError(password, 3, 10);
+    let isMatchError = checkMatchPasswordError(password, confirmPassword);
 
     if(isEmptyError || isEmailError || isUsernameLengthError || isPasswordLengthError || isMatchError);
-})
+}})
